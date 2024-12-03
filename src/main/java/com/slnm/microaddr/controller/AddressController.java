@@ -16,7 +16,7 @@ public class AddressController {
     AddressService addressService;
 
     @GetMapping("/address/{empId}")
-    public ResponseEntity<AddressView> getEmployeeByEmployeeId(@PathVariable("empId") Integer empId){
+    public ResponseEntity<AddressView> getEmployeeByEmployeeId(@PathVariable Integer empId){
         AddressView addressView = addressService.getAddressByempId(empId);
         return ResponseEntity.status(HttpStatus.OK).body(addressView);
     }
